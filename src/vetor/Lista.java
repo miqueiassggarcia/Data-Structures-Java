@@ -50,7 +50,7 @@ public class Lista<T> {
 	
 	public T obter(int posicao) {
 		if(!(posicao >= 0 && posicao < tamanho)) {
-			throw new IllegalArgumentException("PosiÃ§Ã£o invÃ¡lida");
+			throw new IllegalArgumentException("Posição inválida");
 		}
 		return this.elementos[posicao];
 	}
