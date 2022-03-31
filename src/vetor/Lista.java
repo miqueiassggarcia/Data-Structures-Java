@@ -11,6 +11,10 @@ public class Lista<T> {
 		this.tamanho = 0;
 	}
 	
+	public Lista() {
+		this(10);
+	}
+	
 	public boolean adiciona(T elemento) {
 		aumentaCapacidade();
 		if(this.tamanho < this.elementos.length) {
@@ -104,7 +108,7 @@ public class Lista<T> {
 	}
 	
 	public int tamanho() {
-		return 0;
+		return this.tamanho;
 	}
 
 	@Override
