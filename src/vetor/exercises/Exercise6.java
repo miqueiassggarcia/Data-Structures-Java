@@ -1,8 +1,8 @@
-package exercices;
+package vetor.exercises;
 
 import java.util.Scanner;
 
-import teste.Contato;
+import vetor.teste.Contato;
 import vetor.Lista;
 
 public class Exercise6 {
@@ -160,7 +160,7 @@ public class Exercise6 {
 
 			pos = lista.ultimoIndice(contato);
 
-			System.out.println("O ultimo indice encontrado esta¡ na posicao " + pos);
+			System.out.println("O ultimo indice encontrado estaï¿½ na posicao " + pos);
 
 		} catch(Exception e) {
 			System.out.println("Valor invalido, tente novamente!");

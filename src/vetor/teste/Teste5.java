@@ -1,10 +1,10 @@
-package teste;
+package vetor.teste;
 
 import vetor.Vetor;
 
-public class Teste6 {
+public class Teste5 {
 	public static void main(String[] args) {
-		Vetor vetor = new Vetor(5);
+		Vetor vetor = new Vetor(3);
 		
 		vetor.adiciona("A");
 		vetor.adiciona("B");
@@ -12,10 +12,8 @@ public class Teste6 {
 		
 		System.out.println(vetor);
 		
-		int pos = vetor.busca("U");
-		if(pos > -1) {
-			vetor.remove(pos);
-		}
+		vetor.adiciona(2, "C");
+		vetor.adiciona(3, "D");
 		
 		System.out.println(vetor);
 	}

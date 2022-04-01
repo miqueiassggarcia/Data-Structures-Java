@@ -1,4 +1,4 @@
-package teste;
+package vetor.teste;
 
 import vetor.VetorObjetos;
 
@@ -6,7 +6,7 @@ public class Teste7 {
 	public static void main(String[] args) {
 		VetorObjetos vetor = new VetorObjetos(5);
 		
-		Contato c1 = new Contato("João", "98989898", "João@email.com");
+		Contato c1 = new Contato("Joï¿½o", "98989898", "Joï¿½o@email.com");
 		Contato c2 = new Contato("Pedro", "48765413", "Pedro@email.com");
 		Contato c3 = new Contato("Lima", "26841348", "Lima@email.com");
 		Contato c4 = new Contato("Lima", "26841348", "Lima@email.com");
@@ -19,7 +19,7 @@ public class Teste7 {
 		if(pos > -1) {
 			System.out.println("O elemento existe no vetor");
 		} else {
-			System.out.println("O elemento não existe no vetor");
+			System.out.println("O elemento nï¿½o existe no vetor");
 		}
 		
 		System.out.println(vetor);

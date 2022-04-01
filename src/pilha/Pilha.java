@@ -1,42 +1,45 @@
 package pilha;
 
-public class Pilha<T> {
-	private T elementos;
-	private int tamanho;
-	
+import base.EstruturaEstatica;
+
+public class Pilha<T> extends EstruturaEstatica<T>{
 	public Pilha(int capacidade) {
-		this.elementos = (T[]) new Object(capacidade);
-		this.tamanho = 0;
+		super(capacidade);
 	}
 	
-	public void empilha(T pilha) {
-		
+	public Pilha() {
+		super();
 	}
 	
-	public void aumentaCapacidade() {
-		
+	public void  empilha(T pilha) {
+		super.adiciona(pilha);
 	}
 	
 	public boolean estaVazia() {
-		return true;
+		return super.estaVazia();
 	}
 	
 	public T topo() {
-		return this.elementos;
+		if(this.estaVazia()) {
+			return null;
+		}
+		
+		return this.elementos[tamanho - 1];
 	}
 	
 	public T desempilha() {
-		return this.elementos;
+		if(this.estaVazia()) {
+			return null;
+		}
+		
+		/*T elemento = this.elementos[tamanho-1];
+		tamanho--;
+		 */
+		
+		return this.elementos[--tamanho];
 	}
 	
 	public int tamanho() {
-		return this.tamanho;
+		return super.tamanho();
 	}
-
-	@Override
-	public String toString() {
-		return "[elementos=" + elementos + "]";
-	}
-	
-	
 }

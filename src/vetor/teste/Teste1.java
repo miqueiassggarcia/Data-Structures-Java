@@ -1,4 +1,4 @@
-package teste;
+package vetor.teste;
 
 import vetor.Vetor;
 

@@ -1,9 +1,9 @@
-package exercices;
+package vetor.exercises;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import teste.Contato;
+import vetor.teste.Contato;
 
 public class Exercise7 extends Exercise6 {
 	public static void main(String[] args) {
@@ -133,7 +133,7 @@ public class Exercise7 extends Exercise6 {
 
 			pos = array.lastIndexOf(contato);
 
-			System.out.println("O ultimo indice encontrado esta¡ na posicao " + pos);
+			System.out.println("O ultimo indice encontrado estaï¿½ na posicao " + pos);
 
 		} catch(Exception e) {
 			System.out.println("Valor invalido, tente novamente!");

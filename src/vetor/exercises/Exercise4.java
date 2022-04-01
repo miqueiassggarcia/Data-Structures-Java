@@ -1,8 +1,8 @@
-package exercices;
+package vetor.exercises;
 
 import vetor.Lista;
 
-public class Exercise3 {
+public class Exercise4 {
 	public static void main(String[] args) {
 		Lista<String> lista = new Lista<String>(5);
 		
@@ -12,10 +12,6 @@ public class Exercise3 {
 		lista.adiciona("D");
 		lista.adiciona("D");
 		
-		System.out.println(lista);
-		
-		lista.remove("D");
-		
-		System.out.println(lista);
+		System.out.println(lista.obter(1));
 	}
 }
