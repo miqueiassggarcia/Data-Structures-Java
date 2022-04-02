@@ -1,10 +1,10 @@
 package pilha.exercises;
 
-import pilha.Pilha;
+import java.util.Stack;
 
-public class Exercise3 {
+public class Exercise4 {
 	public static void main(String[] args) {
-		Pilha<Livro> livros = new Pilha<Livro>(20);
+		Stack<Livro> livros = new Stack<Livro>();
 
 		Livro livro1 = new Livro(
 				"Estruturas de Dados e Algoritmos com JavaScript: Escreva um Código JavaScript Complexo e Eficaz Usando a Mais Recente ECMAScript",
@@ -43,30 +43,30 @@ public class Exercise3 {
 				"Robert C. Martin"
 				);
 
-		System.out.println("Empilhando os livros, pilha está vazia? "+livros.estaVazia());
+		System.out.println("Empilhando os livros, pilha está vazia? "+livros.isEmpty());
 		
 		System.out.println("\nEmpilhando...");
 		
-		livros.empilha(livro1);
-		livros.empilha(livro2);
-		livros.empilha(livro3);
-		livros.empilha(livro4);
-		livros.empilha(livro5);
-		livros.empilha(livro6);
+		livros.push(livro1);
+		livros.push(livro2);
+		livros.push(livro3);
+		livros.push(livro4);
+		livros.push(livro5);
+		livros.push(livro6);
 		
-		System.out.println(livros.tamanho()+" livros empilhados:");
+		System.out.println(livros.size()+" livros empilhados:");
 		System.out.println(livros);
 		
-		System.out.println("\nÚltimo livros empilhado:\n" + livros.topo());
+		System.out.println("\nÚltimo livros empilhado:\n" + livros.peek());
 		
 		System.out.println("\nDesempilhando arquivos...");
 		
-		while(!livros.estaVazia()) {
-			System.out.println("Desempilhando livro" + livros.desempilha());
+		while(!livros.isEmpty()) {
+			System.out.println("Desempilhando livro" + livros.pop());
 		}
 		
 		System.out.println("\nTodos os livros foram desempilhados");
 		
-		System.out.println("Pilha realmente está vazia? "+ livros.estaVazia());
+		System.out.println("Pilha realmente está vazia? "+ livros.isEmpty());
 	}
 }

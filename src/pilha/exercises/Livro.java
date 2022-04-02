@@ -2,11 +2,11 @@ package pilha.exercises;
 
 public class Livro {
 	private String nome;
-	private int isbn;
+	private String isbn;
 	private int anoLancamento;
 	private String autor;
 	
-	public Livro(String nome, int isbn, int anoLancamento, String autor) {
+	public Livro(String nome, String isbn, int anoLancamento, String autor) {
 		this.nome = nome;
 		this.isbn = isbn;
 		this.anoLancamento = anoLancamento;
@@ -22,10 +22,10 @@ public class Livro {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public int getIsbn() {
+	public String getIsbn() {
 		return isbn;
 	}
-	public void setIsbn(int isbn) {
+	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
 	public int getAnoLancamento() {
@@ -40,7 +40,7 @@ public class Livro {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "[nome=" + nome + ", isbn=" + isbn + ", anoLancamento=" + anoLancamento + ", autor=" + autor + "]";
