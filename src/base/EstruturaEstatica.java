@@ -1,7 +1,5 @@
 package base;
 
-import java.util.Arrays;
-
 public class EstruturaEstatica<T> {
 	protected T[] elementos;
 	protected int tamanho;
@@ -26,19 +24,21 @@ public class EstruturaEstatica<T> {
 		return false;
 	}
 	
-	protected boolean adiciona(int posicao, T elemento) {
-		if(!(posicao >= 0 && posicao < tamanho)) {
+	protected boolean adiciona(int posicao, T elemento){
+
+		if (posicao < 0 || posicao > tamanho){
 			throw new IllegalArgumentException("Posição inválida");
 		}
-		
+
 		this.aumentaCapacidade();
-		
-		for(int i = this.tamanho; i >= posicao; i--) {
-			this.elementos[i] = this.elementos[i-1];
+
+		//mover todos os elementos
+		for (int i=this.tamanho-1; i>=posicao; i--){
+			this.elementos[i+1] = this.elementos[i];
 		}
 		this.elementos[posicao] = elemento;
 		this.tamanho++;
-		
+
 		return true;
 	}
 	
