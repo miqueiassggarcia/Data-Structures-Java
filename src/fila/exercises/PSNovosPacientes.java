@@ -17,7 +17,7 @@ public class PSNovosPacientes implements Runnable{
 
 	@Override
 	public void run() {
-		for(int i = 0; i<MAX_PACIENTE; i++) {
+		for(int i = 0; i< MAX_PACIENTE; i++) {
 			try {
 				Thread.sleep(8000);
 				Pessoa paciente = new Pessoa("" + cont, prioridade.nextInt(3));

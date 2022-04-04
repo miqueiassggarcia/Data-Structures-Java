@@ -15,7 +15,7 @@ public class PSAtendimento implements Runnable{
 		while(!fila.estaVazia()) {
 			try {
 				System.out.println(fila.desenfileira() + " atendida.");
-				Thread.sleep(3000);
+				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
