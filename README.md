@@ -1,4 +1,4 @@
-# DataStructuresJava
+# Data-Structures-Java
 
 ## ⚡ Tecnologias usadas
 <div style="display: inline_block">
