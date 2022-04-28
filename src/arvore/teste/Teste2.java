@@ -17,10 +17,10 @@ public class Teste2 {
 		System.out.println("Em ordem:");
 		arvore.emOrdem(arvore.getRaiz());
 		
-		System.out.println("\nPré ordem:");
+		System.out.println("\nPrï¿½ ordem:");
 		arvore.preOrdem(arvore.getRaiz());
 		
-		System.out.println("\nPós ordem:");
+		System.out.println("\nPï¿½s ordem:");
 		arvore.posOrdem(arvore.getRaiz());
 	}
 }
