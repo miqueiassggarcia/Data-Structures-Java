@@ -9,5 +9,4 @@ public class Teste {
 		arvore.adicionar(10);
 		arvore.adicionar(5);
 	}
-
 }
