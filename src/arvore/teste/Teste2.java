@@ -16,5 +16,11 @@ public class Teste2 {
 		arvore.adicionar(20);
 		System.out.println("Em ordem:");
 		arvore.emOrdem(arvore.getRaiz());
+		
+		System.out.println("\nPré ordem:");
+		arvore.preOrdem(arvore.getRaiz());
+		
+		System.out.println("\nPós ordem:");
+		arvore.posOrdem(arvore.getRaiz());
 	}
 }

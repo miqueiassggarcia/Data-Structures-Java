@@ -48,4 +48,20 @@ public class Arvore<T extends Comparable> {
 			emOrdem(atual.getDireita());
 		}
 	}
+	
+	public void preOrdem(Elemento<T> atual) {
+		if(atual != null) {
+			System.out.println(atual.getValor());
+			preOrdem(atual.getEsquerda());
+			preOrdem(atual.getDireita());
+		}
+	}
+	
+	public void posOrdem(Elemento<T> atual) {
+		if(atual != null) {
+			posOrdem(atual.getEsquerda());
+			posOrdem(atual.getDireita());
+			System.out.println(atual.getValor());
+		}
+	}
 }
