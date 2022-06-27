@@ -1,6 +1,6 @@
 package arvore;
 
-public class ArvoreBinaria<T extends Comparable> {
+public class ArvoreBinaria<T extends Comparable<T>> {
 	private T data;
 	private ArvoreBinaria<T> right;
 	private ArvoreBinaria<T> left;
@@ -12,7 +12,7 @@ public class ArvoreBinaria<T extends Comparable> {
 	}
 	
 	public void insert(T value) {
-		if(!(this.data == null)) {
+		if(this.data == null) {
 			this.data = value;
 		} else if(value.compareTo(this.data) < 0) {
 			if(this.left != null) {
@@ -35,8 +35,8 @@ public class ArvoreBinaria<T extends Comparable> {
 		if(this.data != null) {
 			if(this.left != null) {
 				this.left.print_central();
-				System.out.print(this.data + " ");
 			}
+			System.out.print(this.data + " ");
 			if(this.right != null) {
 				this.right.print_central();
 			}
@@ -82,12 +82,14 @@ public class ArvoreBinaria<T extends Comparable> {
 				dir = -1;
 			}
 			
-			if(this.left.data.compareTo(this.right.data) > 0) {
-				return esq + 1;
-			} else {
-				return dir + 1;
+			if(this.left != null) {
+				if(this.left.data.compareTo(this.right.data) > 0) {
+					return esq + 1;
+				} else {
+					return dir + 1;
+				}
 			}
-
+		return 0;
 		}
 	}
 }
