@@ -43,25 +43,28 @@ public class ArvoreBinaria<T extends Comparable<T>> {
 		}
 	}
 	
-	public int test_of_total_nodes() {
+	public int test_of_left_node() {
 		if(this.left != null) {
-			this.left.total_nodes();
+			return this.left.total_nodes();
 		} else {
 			return 0;
 		}
+	}
+	
+	
+	public int test_of_right_node() {
 		if(this.right != null) {
-			this.right.total_nodes();
+			return this.right.total_nodes();
 		} else {
 			return 0;
 		}
-		return 0;
 	}
 	
 	public int total_nodes() {
 		if(this.data == null) {
 			return 0;
 		} else {
-			return test_of_total_nodes() + 1;
+			return test_of_left_node() + test_of_right_node() + 1;
 		}
 	}
 	
@@ -71,25 +74,23 @@ public class ArvoreBinaria<T extends Comparable<T>> {
 		} else {
 			int esq = 0;
 			if(this.left != null) {
-				this.left.altura();
+				esq = this.left.altura();
 			} else {
 				esq = -1;
 			}
+			
 			int dir = 0;
 			if(this.left != null) {
-				this.left.altura();
+				dir = this.left.altura();
 			} else {
 				dir = -1;
 			}
 			
-			if(this.left != null) {
-				if(this.left.data.compareTo(this.right.data) > 0) {
-					return esq + 1;
-				} else {
-					return dir + 1;
-				}
+			if(esq > dir) {
+				return esq + 1;
+			} else {
+				return dir + 1;
 			}
-		return 0;
 		}
 	}
 }

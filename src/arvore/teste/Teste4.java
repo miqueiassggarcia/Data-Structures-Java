@@ -8,12 +8,14 @@ public class Teste4 {
 		ArvoreBinaria<Integer> arvore = new ArvoreBinaria<Integer>(null);
 		
 		arvore.insert(10);
-		arvore.insert(2);
 		arvore.insert(20);
-		arvore.insert(32);
+		arvore.insert(5);
+		arvore.insert(15);
+		arvore.insert(7);
+		
 		arvore.print_central();
-		System.out.println(arvore.total_nodes());
-		System.out.println(arvore.altura());
+		System.out.println("\nTotal de nodes: " + arvore.total_nodes());
+		System.out.println("Altura da arvore: " + arvore.altura());
 	}
 
 }
