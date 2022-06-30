@@ -80,8 +80,8 @@ public class ArvoreBinaria<T extends Comparable<T>> {
 			}
 			
 			int dir = 0;
-			if(this.left != null) {
-				dir = this.left.altura();
+			if(this.right != null) {
+				dir = this.right.altura();
 			} else {
 				dir = -1;
 			}
